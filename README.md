@@ -32,8 +32,8 @@ The prediction in the NLP task has  tasks of predicting the class, label, and PO
 ## Plan  
 
 <del> ~ 11.16 : Data Preprocessing </del>  
-*~ 11.21 : Make embedding vectors*  
-*~ 11.23 : Experiment for LSTM model*  
-*~ 11.25 : Experiment for Machine Learning model*  
-*~ 12.15 : Experiment for CNN*  
+*\~ 11.21 : Make embedding vectors*   
+*\~ 11.23 : Experiment for LSTM model*   
+*\~ 11.25 : Experiment for Machine Learning model*   
+*\~ 12.15 : Experiment for CNN*   
 *12.16 ~ : Conclude*
