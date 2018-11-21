@@ -19,18 +19,19 @@ The prediction in the NLP task has  tasks of predicting the class, label, and PO
 * [ENG]
    - [Wikidata](https://www.wikidata.org/wiki/Wikidata:Database_download)
    - [SMS_Spam_Collection](http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/)
+   - [Sentiment140](https://www.kaggle.com/kazanova/sentiment140)
 
 * [Kor]
    - [Wikidata](https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4_%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C)
    - Naver Kin(Scrapped)
-   - [NamuWiki](https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EB%8D%A4%ED%94%84)
+   - [Naver movie reply](https://github.com/e9t/nsmc)
 
 ## Metric
 ![hit_ratio](./img/hit_ratio.jpg)
 
 ## Plan  
 
-*~ 11.16 : Data Preprocessing*  
+<del> ~ 11.16 : Data Preprocessing </del>  
 *~ 11.21 : Make embedding vectors*  
 *~ 11.23 : Experiment for LSTM model*  
 *~ 11.25 : Experiment for Machine Learning model*  
