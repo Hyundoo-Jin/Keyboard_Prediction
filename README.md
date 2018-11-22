@@ -27,13 +27,14 @@ The prediction in the NLP task has  tasks of predicting the class, label, and PO
    - [Naver movie reply](https://github.com/e9t/nsmc)
 
 ## Metric
-![hit_ratio](./img/hit_ratio.jpg)
+##### Keystroke saving rate
+![Keystroke Saving Rate](./img/KSR.png)
 
 ## Plan  
 
 <del> ~ 11.16 : Data Preprocessing </del>  
-*\~ 11.21 : Make embedding vectors*   
-*\~ 11.23 : Experiment for LSTM model*   
-*\~ 11.25 : Experiment for Machine Learning model*   
+*\~ 11.23 : Make embedding vectors*   
+*\~ 11.26 : Experiment for LSTM model*   
+*\~ 11.29 : Experiment for Machine Learning model*   
 *\~ 12.15 : Experiment for CNN*   
 *12.16 ~ : Conclude*
