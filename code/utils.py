@@ -16,38 +16,38 @@ class Embedding_Model() :
 
     def argument_setting(self, arguments) :
         # set language
-        if arguments.language == 'kor' or 'k' :
+        if arguments.language == 'kor' or arguments.language == 'k' :
             self.language = 'kor'
-        elif arguments.language == 'eng' or 'e' :
+        elif arguments.language == 'eng' or arguments.language == 'e' :
             self.language = 'eng'
         else :
             raise AttributeError('Undefined language.')
         
         # set model
-        if arguments.model == 'f' or 'fasttext' :
+        if arguments.model == 'f' or arguments.model == 'fasttext' :
             self.model = 'fasttext'
-        elif arguments.model == 'w' or 'word2vec' :
+        elif arguments.model == 'w' or arguments.model == 'word2vec' :
             self.model = 'word2vec'
-        elif arguments.model == 'e' or 'elmo' :
+        elif arguments.model == 'e' or arguments.model == 'elmo' :
             self.model = 'elmo'
         else :
             raise AttributeError('Undefined model.')
         
         # set dataset
         if self.language == 'eng' :
-            if arguments.dataset == 'twitter' or 't' :
+            if arguments.dataset == 'twitter' or arguments.dataset == 't' :
                 self.dataset = 'twitter'
-            elif arguments.dataset == 'sms' or 's' :
+            elif arguments.dataset == 'sms' or arguments.dataset == 's' :
                 self.dataset = 'sms'
-            elif arguments.datset == 'keyboard' or 'k' :
+            elif arguments.datset == 'keyboard' or arguments.dataset == 'k' :
                 self.dataset = 'keyboard'
             else :
                 raise AttributeError('Undefined dataset.')
         
         elif self.language == 'kor' :
-            if arguments.dataset == 'movie' or 'm' :
+            if arguments.dataset == 'movie' or arguments.dataset == 'm' :
                 self.dataset = 'movie'
-            elif arguments.datsaet == 'kin' or 'k' :
+            elif arguments.dataset == 'kin' or arguments.dataset == 'k' :
                 self.dataset = 'kin'
             else :
                 raise AttributeError('Undefined datset.')
