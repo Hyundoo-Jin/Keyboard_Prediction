@@ -1,3 +1,0 @@
-en-sents-shuf.00.test.txt filter=lfs diff=lfs merge=lfs -text
-en-sents-shuf.00.train.txt filter=lfs diff=lfs merge=lfs -text
-en-sents-shuf.00.valid.txt filter=lfs diff=lfs merge=lfs -text

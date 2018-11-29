@@ -1,4 +1,0 @@
-kowiki-20181101-pages-articles.xml.bz2 filter=lfs diff=lfs merge=lfs -text
-movie.pickle filter=lfs diff=lfs merge=lfs -text
-naver_kin.data filter=lfs diff=lfs merge=lfs -text
-wiki_kor.data filter=lfs diff=lfs merge=lfs -text

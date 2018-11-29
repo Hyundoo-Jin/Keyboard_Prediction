@@ -4,7 +4,7 @@ The prediction in the NLP task has  tasks of predicting the class, label, and PO
 
 
 ## Objectives
- - Achieved more than 40% based on Hit ratio metric (30% in Korean)
+ - Achieved more than 40% based on Hit ratio metric
  - Recommended within 0.1s for each time step (Text input)
  - Performance comparison by various embedding techniques (Vanilla Word2vec, Fasttext, Glove, ELMo)
  - Performance comparison by various models (LSTM, CNN, Tree-based machine learning)
@@ -16,15 +16,8 @@ The prediction in the NLP task has  tasks of predicting the class, label, and PO
 
 
 ## Dataset
-* [ENG]
-   - [Wikidata](https://www.wikidata.org/wiki/Wikidata:Database_download)
-   - [SMS_Spam_Collection](http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/)
-   - [Sentiment140](https://www.kaggle.com/kazanova/sentiment140)
-
-* [Kor]
-   - [Wikidata](https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4_%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C)
-   - Naver Kin(Scrapped)
-   - [Naver movie reply](https://github.com/e9t/nsmc)
+   - [Wikinews](https://github.com/Kyubyong/word_prediction)
+   - [SNS_Collection](https://github.com/Meinwerk/WordPrediction)
 
 ## Metric
 ##### Keystroke saving rate
