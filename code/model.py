@@ -7,7 +7,7 @@ import pickle
 
 
 class LanguageModel() :
-    def __init__(self, num_units = 256, epochs = 10, learning_rate = 0.001, embed_dim = 256, batch_size = 256) :
+    def __init__(self, num_units = 256, epochs = 1, learning_rate = 0.001, embed_dim = 256, batch_size = 256) :
         self.epochs = epochs
         self.learning_rate = learning_rate
         self.num_units = num_units
@@ -84,12 +84,27 @@ class LanguageModel() :
             if mean_loss < self._best_loss :
                 best_saver.save(session, os.path.join(model_dir, 'best'))
         last_saver.save(session, os.path.join(model_dir, 'last'))
+    
+    def _word_indexer(self, text) :
+        words = text.split()
+        words_index = np.array([self.word_vocab[word] for word in words if word in self.word_vocab])
+        words_index = words_index.reshape(1, 30, 1)
+        return words_index
 
-            
-            
-        
+    def get_tensor(self, session, text) :
+        input = self._word_indexer(text)
+        output = self._LSTMLayer(input)
+        return session.run(output)
 
-tester = LanguageModel()
-tester.load_dataset('../data/wikinews/wiki_train.pkl', '../data/wikinews/wiki_test.pkl', '../data/wikinews/word_vocab.pkl')
-with tf.Session() as sess :
-    tester.train(sess, '../model/wordprediction')
+    def get_embeddings(self, session) :
+        return self.word_embeddings.eval(session)
+
+    def load_graph(self, session, path) :
+        saver = tf.train.Saver()
+        saver.restore(session, path)
+    
+if '__name__' == '__main__' :
+    tester = LanguageModel()
+    tester.load_dataset('../data/wikinews/wiki_train.pkl', '../data/wikinews/wiki_test.pkl', '../data/wikinews/word_vocab.pkl')
+    with tf.Session() as sess :
+        tester.train(sess, '../model/wikinews')
