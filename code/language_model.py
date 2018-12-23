@@ -100,15 +100,16 @@ class LanguageModel() :
         loss_epoch = 0
         for epoch in trange(self.epochs) :
             session.run(self.iterator.initializer)
+            global_step += 1
             for step in trange(self.train_step) :
                 _, loss = session.run([train_op, seq_loss])
                 loss_epoch += loss
             mean_loss = loss_epoch / self.train_step
-            print('loss for epoch {} is {}. current best loss is {}.'.format(epoch, mean_loss, self._best_loss))
             loss_epoch = 0
             if mean_loss < self._best_loss :
                 best_saver.save(session, os.path.join(model_dir, 'best', 'best_model'))
                 self._best_loss = mean_loss
+            print('loss for epoch {} is {}. current best loss is {}.'.format(epoch, mean_loss, self._best_loss))
         last_saver.save(session, os.path.join(model_dir, 'last', 'last_model'))
     
     def _word_indexer(self, text) :
